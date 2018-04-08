@@ -1,0 +1,11 @@
+html{
+  background-image:url("../images/railway.jpg");
+}
+body, .jumbotron{
+  background-color:transparent;
+  color:black;
+  font-family: cursive, sans-serif;
+}
+.table>thead>tr>th{
+  border:0;
+}

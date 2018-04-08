@@ -1,20 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>TRAIN SCHEDULE</title>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/javascript.js"></script>
 
-  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
-
-  <title>TRAIN SCHEDULER</title>
-</head>
-<body>
-  
-</body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="text-center">TRAIN TIMES</h1>       
+      </div>
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">TRAIN SCHEDULE</h3>
+        </div>
+      <div class="container">                                                
+         <div class="table-responsive">          
+              <table class="table"> 
+                <thead>
+                  <tr>
+                    <th>TRAIN ID</th>
+                    <th>DESTINATION</th>
+                    <th>ARRIVAL FREQUENCY (MINUTES)</th>
+                    <th>ARRIVAL NEXT</th>
+                    <th>ARRIVAL MINUTES</th>
+                    <div id="full-member-list"></div>
+                  </tr>
+                </thead>
+              </table>
+        </div>
+      </div>
+      </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">INFORMATION</h3>
+              </div>
+              <div class="panel-body">
+                <form>
+                  <div class="form-group">
+                    <label for="bidder-name">TRAIN ID</label>
+                    <input class="form-control" id="train" type="text">
+                  </div>
+                  <div class="form-group">
+                    <label for="bidder-price">DESTINATION</label>
+                    <input class="form-control" id="destination" type="text">
+                  </div>
+                  <div class="form-group">
+                    <label for="bidder-price">INITIAL TRAIN TIME (HH:MM/MILITARY)</label>
+                    <input class="form-control" id="initialTrain" type="number">
+                  </div>
+                  <div class="form-group">
+                    <label for="bidder-price">ARRIVAL FREQUENCY (MINUTES)</label>
+                    <input class="form-control" id="frequency" type="number">
+                  </div>
+                  <button class="btn btn-primary" id="submit-id" type="submit">ENTER</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </body>
 </html>
